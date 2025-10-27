@@ -44,4 +44,4 @@ https://greasyfork.org/zh-CN/scripts/514529-embylaunchpotplayer
 ## 自助服务：
 tg群可以粘贴分享链接或者搜索名称自行添加资源
 
-https://t.me/+V8lxSJQDb2k5NzE1
+[加入我们](https://t.me/+V8lxSJQDb2k5NzE1)
