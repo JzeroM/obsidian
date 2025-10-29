@@ -1,3 +1,6 @@
+
+## EMBY客户端：
+[客户端集合](https://www.phirs.com/archive/3440.html)
 ## 账户管理界面：
 [我的帐户](https://invite.pgrm.top/my/account)
 ## 客户端线路地址：
