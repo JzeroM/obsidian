@@ -1,3 +1,3 @@
 # 欢迎辞
-## <center>Welcome to LIBILIBI</center>
+## <center>WELCOME TO LIBILIBI</center>
 ![壁纸](https://cdn.seovx.com/?mom=302)
