@@ -1,3 +1,3 @@
 # 欢迎
-## <center>Welcome to 哩哔哩哔!</center>
+## <center>Welcome to BILIBILI</center>
 ![壁纸](https://cdn.seovx.com/?mom=302)
