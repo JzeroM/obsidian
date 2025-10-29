@@ -1,2 +1,3 @@
-# 欢迎来到哩哔哩哔
+# 首页
+## <center>欢迎来到哩哔哩哔</center>
 ![壁纸](https://cdn.seovx.com/?mom=302)
