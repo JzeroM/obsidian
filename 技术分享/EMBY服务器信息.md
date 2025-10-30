@@ -45,6 +45,7 @@ emby调用外部播放器脚本（安装完篡改猴再安装这个）
 
 https://greasyfork.org/zh-CN/scripts/514529-embylaunchpotplayer
 ## 自助服务：
-tg群可以粘贴分享链接或者搜索名称自行添加资源
-
+### TG 群自助添加资源说明：
+1.请先查库中是否已有，因为资源无法多版本
+2.可以粘贴分享链接或者搜索名称自行添加资源
 [加入我们](https://t.me/+V8lxSJQDb2k5NzE1)
