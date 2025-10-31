@@ -13,8 +13,6 @@ kowo.eu.org（netlify线路）
 
 x.seraphine.eu.org（edgeone加速源站）
 
-libitv.pgrm.top （大陆直连，屏蔽外网）
-
 协议：https
 
 端口：443
