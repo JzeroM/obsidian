@@ -47,10 +47,8 @@ https://greasyfork.org/zh-CN/scripts/514529-embylaunchpotplayer
 ## 会员求片自助服务：
 ### Q群求片：
 @群主求片，有资源尽量满足，快速上片
-### TG 群自助添加资源说明：
-1.请先查库中是否已有，因为资源无法多版本。
-
-2.可以粘贴分享链接或者搜索名称自行添加资源, 为保证准确快速入库分享链接内部文件必须有资源真实名称，剧集资源格式应满足 S季数E集数，如 "S01E01"。
+### TG 群自助添加资源：
+可以粘贴分享链接或者搜索名称自行添加资源
 
 ## 加入我们：
 [Q群](https://qun.qq.com/universal-share/share?ac=1&authKey=NRnAzHyhorDocqWuqIH1FKU6HsVEZNs4anE70p3pNXp%2FskIW%2FVvNABFol7OQsYhn&busi_data=eyJncm91cENvZGUiOiIxMDcyNTIzNjg0IiwidG9rZW4iOiJEbXg3eHF5R0NYemk1VDU0dDEwb3hrVXZ4aE90RTZSbnNxS0xkdm5PSU1jVnlpODhwTjNwV2htelRmTDdQMExsIiwidWluIjoiMjY0MDI1NjQ0NiJ9&data=bbaZGwNshSnyvD8t-Si9j92iMCOeKykxvwPDrt3hjSHv8HIr34a0QrtGtqPPnMNbYlJjPIRjPyYfrfrOjGU-Bw&svctype=4&tempid=h5_group_info)
