@@ -3,9 +3,7 @@
 [客户端集合](https://www.phirs.com/archive/3440.html)
 ## 账户管理界面：
 [我的帐户](https://invite.pgrm.top/my/account)
-## 客户端线路地址：
-
-### 1. 支持IPv4和IPv6的线路地址（自行测速选其一）：
+## 客户端线路地址（自行测速选其一）：
 
 nouon.eu.org（cloufare tunnel线路）
 
@@ -15,17 +13,11 @@ kowo.eu.org（netlify线路）
 
 x.seraphine.eu.org（edgeone加速源站）
 
+libitv.pgrm.top （大陆直连，屏蔽外网）
+
 协议：https
 
 端口：443
-
-——————————————————
-### 2. 仅支持ipv6的线路地址：
-cerda.eu.org（最快）
-
-协议：http
-
-端口：8091
 
 ——————————————————
 
