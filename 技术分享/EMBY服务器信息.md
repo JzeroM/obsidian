@@ -44,3 +44,6 @@ https://greasyfork.org/zh-CN/scripts/514529-embylaunchpotplayer
 
 ## 加入我们：
 [Q群](https://qun.qq.com/universal-share/share?ac=1&authKey=NRnAzHyhorDocqWuqIH1FKU6HsVEZNs4anE70p3pNXp%2FskIW%2FVvNABFol7OQsYhn&busi_data=eyJncm91cENvZGUiOiIxMDcyNTIzNjg0IiwidG9rZW4iOiJEbXg3eHF5R0NYemk1VDU0dDEwb3hrVXZ4aE90RTZSbnNxS0xkdm5PSU1jVnlpODhwTjNwV2htelRmTDdQMExsIiwidWluIjoiMjY0MDI1NjQ0NiJ9&data=bbaZGwNshSnyvD8t-Si9j92iMCOeKykxvwPDrt3hjSHv8HIr34a0QrtGtqPPnMNbYlJjPIRjPyYfrfrOjGU-Bw&svctype=4&tempid=h5_group_info)
+
+打赏服主
+![支付宝收款码](https://z.wiki/u/7PawzD)
