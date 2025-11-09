@@ -2,6 +2,7 @@
 
 注：由于 mediahelp 删库，自行想办法 pull docker 镜像，或者舍弃夸克部分（要同时删除 compose 配置文件里相关部分）！
 
+## 部署部分 ：
 SSH 连接 nas 或者服务器，切换到 root 用户下
 
 Root用户下创建文件文件夹server 和文件夹strm（存放 strm 文件） 并授权，进入server文件夹：
@@ -204,3 +205,7 @@ nano config.yaml
 cd /vol1/1000/server
 docker compose up -d
 ```
+
+
+## 配置部分 ：
+待更新.............
