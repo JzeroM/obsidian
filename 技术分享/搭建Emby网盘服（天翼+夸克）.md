@@ -4,7 +4,7 @@
 
 SSH 连接 nas 或者服务器，切换到 root 用户下
 
-Root用户下创建文件文件夹server 和文件夹strm 并授权，进入server文件夹：
+Root用户下创建文件文件夹server 和文件夹strm（存放 strm 文件） 并授权，进入server文件夹：
 ```
 mkdir /vol1/1000/server && mkdir /vol1/1000/strm
 chmod -R 777 /vol1/1000/server && chmod -R 777 /vol1/1000/strm
