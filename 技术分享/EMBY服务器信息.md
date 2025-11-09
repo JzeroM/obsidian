@@ -1,6 +1,8 @@
 
 ## EMBY客户端：
-[客户端集合](https://www.phirs.com/archive/3440.html)
+[三方客户端](https://www.123912.com/s/UNvZVv-Sclf3?notoken=1)
+
+[客户端对比](https://www.phirs.com/archive/3440.html)
 
 [钢筋浏览器TV版支持EMBY](https://gjllq.com/tv/tv.html)
 ## 账户管理界面：
