@@ -2,6 +2,7 @@
 
 注：由于 mediahelp 删库，自行想办法 pull docker 镜像，或者舍弃夸克部分（要同时删除 compose 配置文件里相关部分）！
 
+
 ## 部署部分 ：
 SSH 连接 nas 或者服务器，切换到 root 用户下
 
