@@ -54,26 +54,6 @@ services:
     depends_on:
       - clash
 
-  # CloudSaver 服务
-  cloudsaver:
-    image: jiangrui1994/cloudsaver:latest
-    container_name: cloud-saver
-    networks:
-      - trim-default
-    ports:
-      - "8008:8008"
-    environment:
-      TZ: Asia/Shanghai
-      http_proxy: http://clash:7890
-      https_proxy: http://clash:7890
-      no_proxy: localhost,127.0.0.1,.internal,clash,yacd
-    volumes:
-      - ./cloudsaver/data:/app/data
-      - ./cloudsaver/config:/app/config
-    restart: unless-stopped
-    depends_on:
-      - clash
-
   # Emby 媒体服务器
   emby:
     image: amilys/embyserver:latest
