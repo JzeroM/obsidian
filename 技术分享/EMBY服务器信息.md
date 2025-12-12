@@ -24,22 +24,8 @@ x.seraphine.eu.org（edgeone加速源站）
 ——————————————————
 
 注：现已接入天翼云盘和夸克网盘，免费提供请自备客户端，云盘服务商限制网络高峰期会卡顿; 弹幕API（每月流量有限仅限内部使用）：https://frlsxmvqyzxc.ap-northeast-1.clawcloudrun.com/5201314
-## emby网页调用播放器流程：
-篡改猴（油猴）插件
-
-win7（下载完直接拖到浏览器插件管理）：
-
-https://www.tampermonkey.net/crx/tampermonkey_legacy.crx
-
-win10：在浏览器插件商店下载最新版
-
-————————————————————
-
-emby调用外部播放器脚本（安装完篡改猴再安装这个）
-
-https://greasyfork.org/zh-CN/scripts/514529-embylaunchpotplayer
-## 会员求片自助服务：
-### Q群求片：
+## 求片自助服务：
+### 求片：
 @群主求片，有资源尽量满足，快速上片
 ### TG 群自助添加资源：
 可以粘贴分享链接或者搜索名称自行添加资源
