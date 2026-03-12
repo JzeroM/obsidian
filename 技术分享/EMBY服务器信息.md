@@ -6,7 +6,7 @@
 
 [钢筋浏览器TV版支持EMBY](https://gjllq.com/tv/tv.html)
 ## 账户管理界面：
-[我的帐户](https://invite.pgrm.top/my/account)
+[我的帐户](https://libilibi.pgrm.top/request)
 ## 客户端线路地址（自行测速选其一）：
 
 nouon.eu.org（cloufare tunnel线路）
@@ -15,7 +15,7 @@ libilibi.eu.org（cloufare优选线路）
 
 kowo.eu.org（netlify线路）
 
-x.seraphine.eu.org（edgeone加速源站）
+libitv.pgrm.top（国内直连，屏蔽外网）
 
 协议：https
 
@@ -23,10 +23,9 @@ x.seraphine.eu.org（edgeone加速源站）
 
 ——————————————————
 
-注：现已接入天翼云盘和夸克网盘，免费提供请自备客户端，云盘服务商限制网络高峰期会卡顿; 弹幕API（每月流量有限仅限内部使用）：https://frlsxmvqyzxc.ap-northeast-1.clawcloudrun.com/5201314
-## 求片自助服务：
+注：由于云盘服务商限制，晚上网络高峰期会卡顿; 弹幕API（每月流量有限仅限内部使用）： https://seraphine.eu.org/1314
 ### 求片：
-@群主求片，有资源尽量满足，快速上片
+用户社区可求片，有资源会尽量满足，快速上片
 ### TG 群自助添加资源：
 可以粘贴分享链接或者搜索名称自行添加资源
 
