@@ -3,7 +3,7 @@
 [三方客户端](https://www.123912.com/s/UNvZVv-Sclf3?notoken=1)
 
 [钢筋浏览器TV版支持EMBY](https://gjllq.com/tv/tv.html)
-## 账户管理界面：
+## 用户社区：
 [我的帐户](https://libilibi.pgrm.top/request)
 ## 客户端线路地址（自行测速选其一）：
 
@@ -21,7 +21,9 @@ libitv.pgrm.top（国内直连，屏蔽外网）
 
 ——————————————————
 
-注：由于云盘服务商限制，晚上网络高峰期会卡顿; 弹幕API（每月流量有限仅限内部使用）： https://seraphine.eu.org/1314
+注：由于云盘服务商限制，晚上网络高峰期会卡顿!!！
+
+自建弹幕API： https://seraphine.eu.org/1314
 ### 求片：
 用户社区可求片，有资源会尽量满足，快速上片
 ## 加入我们：
