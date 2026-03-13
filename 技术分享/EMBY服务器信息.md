@@ -26,5 +26,10 @@ libitv.pgrm.top（国内直连，屏蔽外网）
 自建弹幕API： https://seraphine.eu.org/1314
 ### 求片：
 用户社区可求片，有资源会尽量满足，快速上片
+## 计费模式：
+体验账号：不计费，公共账户（多人登录，不定期清户）
+普通账号：8 元/30 天（到期清户）
+长期账号：80 元/365 天 （账户可续费）
+永久账号：288 元（到期时间以关服为准）
 ## 加入我们：
 [Q群](https://qun.qq.com/universal-share/share?ac=1&authKey=NRnAzHyhorDocqWuqIH1FKU6HsVEZNs4anE70p3pNXp%2FskIW%2FVvNABFol7OQsYhn&busi_data=eyJncm91cENvZGUiOiIxMDcyNTIzNjg0IiwidG9rZW4iOiJEbXg3eHF5R0NYemk1VDU0dDEwb3hrVXZ4aE90RTZSbnNxS0xkdm5PSU1jVnlpODhwTjNwV2htelRmTDdQMExsIiwidWluIjoiMjY0MDI1NjQ0NiJ9&data=bbaZGwNshSnyvD8t-Si9j92iMCOeKykxvwPDrt3hjSHv8HIr34a0QrtGtqPPnMNbYlJjPIRjPyYfrfrOjGU-Bw&svctype=4&tempid=h5_group_info)
