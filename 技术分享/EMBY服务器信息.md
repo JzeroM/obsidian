@@ -36,6 +36,7 @@ libitv.pgrm.top（国内直连，屏蔽外网）
 
 永久账号：288 元（到期时间以关服为准）
 
+付费用户请走平台交易：
 ![闲鱼](https://esaimg.cdn1.vip/i/69b3b73599155_1773385525.webp)
 ## 加入我们：
 [Q群](https://qun.qq.com/universal-share/share?ac=1&authKey=NRnAzHyhorDocqWuqIH1FKU6HsVEZNs4anE70p3pNXp%2FskIW%2FVvNABFol7OQsYhn&busi_data=eyJncm91cENvZGUiOiIxMDcyNTIzNjg0IiwidG9rZW4iOiJEbXg3eHF5R0NYemk1VDU0dDEwb3hrVXZ4aE90RTZSbnNxS0xkdm5PSU1jVnlpODhwTjNwV2htelRmTDdQMExsIiwidWluIjoiMjY0MDI1NjQ0NiJ9&data=bbaZGwNshSnyvD8t-Si9j92iMCOeKykxvwPDrt3hjSHv8HIr34a0QrtGtqPPnMNbYlJjPIRjPyYfrfrOjGU-Bw&svctype=4&tempid=h5_group_info)
