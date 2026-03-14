@@ -1,8 +1,4 @@
 
-## EMBY客户端：
-[三方客户端](https://www.123912.com/s/UNvZVv-Sclf3?notoken=1)
-
-[钢筋浏览器TV版支持EMBY](https://gjllq.com/tv/tv.html)
 ## 客户端线路地址（自行测速选其一）：
 
 nouon.eu.org（cloufare tunnel线路）
@@ -22,6 +18,11 @@ libitv.pgrm.top（国内直连，屏蔽外网）
 注：由于云盘服务商限制，晚上网络高峰期会卡顿!!！
 
 自建弹幕API： https://seraphine.eu.org/1314
+
+## EMBY安卓TV客户端：
+适用各种新老电视以及电视盒子
+
+[钢筋浏览器TV版支持EMBY](https://gjllq.com/tv/tv.html)
 ### 求片和报错：
 用户社区可求片，有资源会尽量满足，快速上片，有报错问题也可提交工单！
 
