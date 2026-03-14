@@ -23,7 +23,7 @@ libitv.pgrm.top（国内直连，屏蔽外网）
 适用各种新老电视以及电视盒子
 
 [钢筋浏览器TV版支持EMBY](https://gjllq.com/tv/tv.html)
-### 求片和报错：
+## 求片和报错：
 用户社区可求片，有资源会尽量满足，快速上片，有报错问题也可提交工单！
 
 [用户社区](https://libilibi.pgrm.top/request)
