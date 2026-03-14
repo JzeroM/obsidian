@@ -18,7 +18,6 @@ libitv.pgrm.top（国内直连，屏蔽外网）
 注：由于云盘服务商限制，晚上网络高峰期会卡顿!!！
 
 自建弹幕API： https://seraphine.eu.org/1314
-
 ## EMBY安卓TV客户端：
 适用各种新老电视以及电视盒子
 
