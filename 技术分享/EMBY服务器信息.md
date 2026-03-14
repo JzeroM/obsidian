@@ -3,8 +3,6 @@
 [三方客户端](https://www.123912.com/s/UNvZVv-Sclf3?notoken=1)
 
 [钢筋浏览器TV版支持EMBY](https://gjllq.com/tv/tv.html)
-## 用户社区：
-[我的帐户](https://libilibi.pgrm.top/request)
 ## 客户端线路地址（自行测速选其一）：
 
 nouon.eu.org（cloufare tunnel线路）
@@ -24,11 +22,13 @@ libitv.pgrm.top（国内直连，屏蔽外网）
 注：由于云盘服务商限制，晚上网络高峰期会卡顿!!！
 
 自建弹幕API： https://seraphine.eu.org/1314
-### 求片：
-用户社区可求片，有资源会尽量满足，快速上片
+### 求片和报错：
+用户社区可求片，有资源会尽量满足，快速上片，有报错问题也可提交工单！
+
+[用户社区](https://libilibi.pgrm.top/request)
 ## 计费模式：
 
-体验账号：不计费，公共账户（多人登录，不定期清户）
+体验账号：不计费，限时账户（不定期清户）
 
 普通账号：8 元/30 天（到期清户）
 
