@@ -16,9 +16,7 @@ cd n2n
 ```
 4. 安装autoconf 和C 编译器
 ```
-apt update
-apt install autoconf
-apt install build-essential
+apt update && apt install -y autoconf build-essential
 ```
 5. 编译项目
 ```
