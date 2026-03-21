@@ -40,10 +40,12 @@ make install
 ./supernode -p 10086 -f
 ```
 
-7. 客户端启动
+7. 客户端启动（搭服务端忽略这步）
 ```
 ./edge -c jaychou -a 10.10.10.10 -f -l n2n.moyann.com:10090
 ```
 
 PC 客户端下载
 [EasyN2N（小黄鸭） v3.3 \| Bug侠](https://bugxia.com/357.html)
+
+[![f3ff06cdc567459164b9aaae01ef6467.png](https://picui.ogmua.cn/s1/2026/03/22/69beca6190cd3.webp)](https://picui.ogmua.cn/s1/2026/03/22/69beca6190cd3.webp)
