@@ -21,24 +21,28 @@ nano docker-compose.yml
 ```
  文件内容如下并修改注释部分内容：
 ```
-version: '3.8'
 services:
   # Clash 核心服务
   clash:
-    image: dreamacro/clash-premium:latest
+    image: metacubex/mihomo:latest
     container_name: clash
     networks:
       - trim-default
-    restart: unless-stopped
+    restart: always
     ports:
-      - "7890:7890"  # HTTP 代理端口
-      - "7891:7891"  # SOCKS5 代理端口
-      - "9090:9090"  # 控制端口
+      - "7890:7890"   # HTTP
+      - "7891:7891"   # SOCKS5
+      - "9090:9090"   # 控制端口
     volumes:
-      - ./clash/config:/root/.config/clash
+      - ./clash/config:/root/.config/mihomo
     environment:
       TZ: Asia/Shanghai
       EXTERNAL_CONTROLLER: 0.0.0.0:9090
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 9090"]
+      interval: 5s
+      timeout: 3s
+      retries: 5
 
   # Clash 控制面板
   yacd:
@@ -46,29 +50,23 @@ services:
     container_name: clash-dashboard
     networks:
       - trim-default
-    restart: unless-stopped
+    restart: always
     ports:
       - "8080:80"
     environment:
       YACD_DEFAULT_BACKEND: http://clash:9090
     depends_on:
-      - clash
+      clash:
+        condition: service_healthy
 
   # Emby 媒体服务器
   emby:
-    image: amilys/embyserver:latest # 有神医pro就用最新版本，没有就把latest换成神医免费版支持的版本
+    image: amilys/embyserver:latest
     container_name: emby-amilys
-    user: '0:0'
+    user: "0:0"
     networks:
       - trim-default
-    restart: unless-stopped
-    devices:
-      - /dev/dri:/dev/dri 
-    # 新增内存限制配置
-    deploy:
-      resources:
-        limits:
-          memory: 12G
+    restart: always
     environment:
       UID: 0
       GID: 0
@@ -76,23 +74,27 @@ services:
       PUID: 1000
       PGID: 1000
       TZ: Asia/Shanghai
-      http_proxy: http://clash:7890
-      https_proxy: http://clash:7890
-      no_proxy: localhost,127.0.0.1,.internal,clash,yacd
     volumes:
       - ./emby/config:/config
       - ./strm:/media
     ports:
       - "8096:8096"
     depends_on:
-      - clash
+      clash:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z localhost 8096"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
 
   # 天翼云盘自动同步
   cloud189:
-    image: xia1307/cloud189-auto-save-pro:test-0.0.31
+    image: xia1307/cloud189-auto-save-pro:1.1.7
     container_name: cloud189pro
-    network_mode: "host"  # 改为使用宿主机网络
-    restart: unless-stopped
+    network_mode: host
+    restart: always
     privileged: true
     volumes:
       - ./cloud189pro/data:/home/data
@@ -101,13 +103,15 @@ services:
       PUID: 0
       PGID: 0
       NODE_OPTIONS: --dns-result-order=ipv4first
-      SERVICE_CODE: XXXXXXXX这里填授权码
+      SERVICE_CODE: XXXX授权码XXXXX
       CASBY_ENABLE: 1
       TZ: Asia/Shanghai
-      # 关键修改：设置代理指向宿主机的IP和Clash映射的端口
-      http_proxy: http://宿主机的IP:7890
-      https_proxy: http://宿主机的IP:7890
-      no_proxy: localhost,127.0.0.1,.internal,clash,yacd,v.c.1307x.top
+      http_proxy: http://127.0.0.1:7890
+      https_proxy: http://127.0.0.1:7890
+      no_proxy: localhost,127.0.0.1,v.c.1307x.top,emby
+    depends_on:
+      emby:
+        condition: service_healthy
 
   # MoviePilot 媒体管理
   moviepilot:
@@ -118,26 +122,31 @@ services:
     networks:
       - trim-default
     ports:
-      - "3333:3000"  # 将宿主机端口从3000更改为3333
+      - "3333:3000"
     volumes:
       - ./strm:/media
       - ./moviepilot/config:/config
       - ./moviepilot/core:/moviepilot/.cache/ms-playwright
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
-      NGINX_PORT: '3000'
-      PORT: '3001'
-      PUID: '0'
-      PGID: '0'
-      UMASK: '000'
+      MOVIEPILOT_AUTO_UPDATE: true
+      NGINX_PORT: "3000"
+      PORT: "3001"
+      PUID: "0"
+      PGID: "0"
+      UMASK: "000"
       TZ: Asia/Shanghai
       SUPERUSER: admin
       http_proxy: http://clash:7890
       https_proxy: http://clash:7890
-      no_proxy: localhost,127.0.0.1,.internal,clash,yacd
-    restart: unless-stopped
+      no_proxy: localhost,127.0.0.1,.internal,clash,yacd,emby
+    restart: always
     depends_on:
-      - clash
+      emby:
+        condition: service_healthy
+      cloud189:
+        condition: service_started
+        
 networks:
   trim-default:
     external: true
