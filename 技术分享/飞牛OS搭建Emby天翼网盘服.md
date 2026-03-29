@@ -158,6 +158,7 @@ docker-compose up --build
 ```
 
 进入 clash 配置文件夹修改 config.yaml 文件内容，内容即 clash 配置文件内容并修改两处为 allow-lan: true 和 external-controller: '0.0.0.0:9090'（飞牛商店下载文本编辑器，clash 配置文件在 server 文件夹里面的 clash 文件夹里面的 config 文件夹里，如果文件名不是config.yaml就改成config.yaml，编辑config.yaml 文件）
+
 ```
 cd clash/config
 nano config.yaml
