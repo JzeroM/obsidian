@@ -11,62 +11,46 @@ chmod -R 777 /vol1/1000/libitv/server
 cd /vol1/1000/libitv/server
 ```
 
-Docker创建一个名为 trim-default的自定义桥接网络： (字面意思)
-```
-docker network create -d bridge trim-default
-```
-server 文件夹下创建 docker-compose.yml（打开 docker，新建 compose 项目，项目名随便，项目文件夹选前面创建的server 文件夹，创建docker-compose.yml）
+server 文件夹下创建 docker-compose.yml（打开 docker，新建 compose 项目，项目名随便，项目文件夹选前面创建的server 文件夹，创建docker-compose.yml，修改授权码和飞牛内网 ip）
 ```
 nano docker-compose.yml
 ```
  文件内容如下并修改注释部分内容：
 ```
 services:
-  # Clash 核心服务
   clash:
     image: metacubex/mihomo:latest
     container_name: clash
-    networks:
-      - trim-default
+    network_mode: bridge
     restart: always
     ports:
-      - "7890:7890"   # HTTP
-      - "7891:7891"   # SOCKS5
-      - "9090:9090"   # 控制端口
+      - "7890:7890"
+      - "7891:7891"
+      - "9090:9090"
     volumes:
       - ./clash/config:/root/.config/mihomo
     environment:
       TZ: Asia/Shanghai
       EXTERNAL_CONTROLLER: 0.0.0.0:9090
-    healthcheck:
-      test: ["CMD-SHELL", "nc -z localhost 9090"]
-      interval: 5s
-      timeout: 3s
-      retries: 5
 
-  # Clash 控制面板
   yacd:
     image: haishanh/yacd:latest
     container_name: clash-dashboard
-    networks:
-      - trim-default
+    network_mode: bridge
     restart: always
     ports:
       - "8080:80"
     environment:
       YACD_DEFAULT_BACKEND: http://clash:9090
-    depends_on:
-      clash:
-        condition: service_healthy
 
-  # Emby 媒体服务器
   emby:
     image: amilys/embyserver:latest
     container_name: emby-amilys
     user: "0:0"
-    networks:
-      - trim-default
+    network_mode: host
     restart: always
+    ports:
+      - "8096:8096"
     environment:
       UID: 0
       GID: 0
@@ -74,27 +58,21 @@ services:
       PUID: 1000
       PGID: 1000
       TZ: Asia/Shanghai
+      #http_proxy: http://飞牛内网IP:7890
+      #https_proxy: http://飞牛内网IP:7890
+      #no_proxy: 127.0.0.1,localhost,v.c.1307x.top
     volumes:
       - ./emby/config:/config
       - ./strm:/media
-    ports:
-      - "8096:8096"
-    depends_on:
-      clash:
-        condition: service_healthy
-    healthcheck:
-      test: ["CMD-SHELL", "nc -z localhost 8096"]
-      interval: 10s
-      timeout: 5s
-      retries: 10
-      start_period: 10s
 
-  # 天翼云盘自动同步
   cloud189:
-    image: xia1307/cloud189-auto-save-pro:1.1.7
+    image: xia1307/cloud189-auto-save-pro:test-0.0.39
     container_name: cloud189pro
     network_mode: host
     restart: always
+    ports:
+      - "3000:3000"
+      - "8091:8091"
     privileged: true
     volumes:
       - ./cloud189pro/data:/home/data
@@ -103,53 +81,38 @@ services:
       PUID: 0
       PGID: 0
       NODE_OPTIONS: --dns-result-order=ipv4first
-      SERVICE_CODE: XXXX授权码XXXXX
+      SERVICE_CODE: 授权码
       CASBY_ENABLE: 1
       TZ: Asia/Shanghai
-      http_proxy: http://127.0.0.1:7890
-      https_proxy: http://127.0.0.1:7890
-      no_proxy: localhost,127.0.0.1,v.c.1307x.top,emby
-    depends_on:
-      emby:
-        condition: service_healthy
+      http_proxy: http://飞牛内网IP:7890
+      https_proxy: http://飞牛内网IP:7890
+      no_proxy: 127.0.0.1,localhost,v.c.1307x.top
 
-  # MoviePilot 媒体管理
   moviepilot:
     image: jxxghp/moviepilot-v2:latest
     container_name: moviepilot-v2
+    network_mode: host
     stdin_open: true
     tty: true
-    networks:
-      - trim-default
+    restart: always
     ports:
-      - "3333:3000"
+      - "3002:3002"
     volumes:
       - ./strm:/media
       - ./moviepilot/config:/config
-      - ./moviepilot/core:/moviepilot/.cache/ms-playwright
       - /var/run/docker.sock:/var/run/docker.sock:ro
     environment:
       MOVIEPILOT_AUTO_UPDATE: true
-      NGINX_PORT: "3000"
+      NGINX_PORT: "3002"
       PORT: "3001"
       PUID: "0"
       PGID: "0"
       UMASK: "000"
       TZ: Asia/Shanghai
       SUPERUSER: admin
-      http_proxy: http://clash:7890
-      https_proxy: http://clash:7890
-      no_proxy: localhost,127.0.0.1,.internal,clash,yacd,emby
-    restart: always
-    depends_on:
-      emby:
-        condition: service_healthy
-      cloud189:
-        condition: service_started
-        
-networks:
-  trim-default:
-    external: true
+      http_proxy: http://飞牛内网IP:7890
+      https_proxy: http://飞牛内网IP:7890
+      no_proxy: 127.0.0.1,localhost
 ```
 
 构建 docker compose 不启动（构建，不勾选自启动）
@@ -157,11 +120,54 @@ networks:
 docker-compose up --build
 ```
 
-进入 clash 配置文件夹修改 config.yaml 文件内容，内容即 clash 配置文件内容并修改两处为 allow-lan: true 和 external-controller: '0.0.0.0:9090'（飞牛商店下载文本编辑器，clash 配置文件在 server 文件夹里面的 clash 文件夹里面的 config 文件夹里，如果文件名不是config.yaml就改成config.yaml，编辑config.yaml 文件）
+进入 clash 配置文件夹修改 config.yaml 文件内容（飞牛商店下载文本编辑器，clash 配置文件在 server 文件夹里面的 clash 文件夹里面的 config 文件夹里，如果文件名不是config.yaml就改成config.yaml，编辑config.yaml 文件）
 
 ```
 cd clash/config
 nano config.yaml
+```
+config.yaml 的内容如下(替换clash 订阅地址)：
+
+```
+mixed-port: 7890
+allow-lan: true
+bind-address: 0.0.0.0
+mode: rule
+log-level: info
+
+external-controller: 0.0.0.0:9090
+external-ui: ui
+external-ui-url: https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip
+
+tun:
+  enable: false
+
+proxy-providers:
+  mojito:
+    url: "这里填clash订阅地址"
+    type: http
+    interval: 86400
+
+proxies:
+  - name: "直连"
+    type: direct
+
+proxy-groups:
+  - name: 默认
+    type: select
+    proxies:
+      - 自动选择
+      - 直连
+
+  - name: 自动选择
+    type: url-test
+    use:
+      - mojito
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+
+rules:
+  - MATCH,默认
 ```
 
 返回 server目录并启动 docker compose（再去启动这个 compose）
