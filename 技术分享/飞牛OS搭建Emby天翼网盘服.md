@@ -1,4 +1,4 @@
-准备工作：CASpro授权码
+准备工作：CASpro授权码（[激活码 :: 天翼自动转存文档](https://1307super.github.io/Cloud189AutoSaveProDoc/donations/)）
 
 注：前提机器必须是飞牛OS系统！
 ## 部署部分（以下操作在命令行，不用命令也可根据括号内文字直接图形化操作）：
